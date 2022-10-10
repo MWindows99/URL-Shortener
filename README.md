@@ -8,7 +8,7 @@ It is possible to create a custom URL and associate it with a destination URL.
 Install the dependencies using `pip install -U -r requirements.txt`.
 
 ## Usage
-Run the server using `python main.py`.
+Run the server using `python main.py`. (Use the `nohup` command to keep it running.)
 
 ## Configuration
 The configuration is done in the `config.ini` file. The following options are available:
@@ -104,7 +104,7 @@ curl -X 'DELETE' \
 ```
 
 ## License
-Please watch the License file for more information.
+Please watch the [License](https://github.com/MWindows99/URL-Shortener/blob/main/LICENSE) file for more information.
 
 ## Report a bug
-Please send from Issues tab.
+Please send from [Issues](https://github.com/MWindows99/URL-Shortener/issues/new) tab.
