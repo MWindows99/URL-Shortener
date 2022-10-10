@@ -30,8 +30,34 @@ Requests to the API are done using JSON. The following endpoints are available:
  - `/delete` [Method: `DELETE`] : Deletes a short URL. The request body must contain a 'short_key' which is the short URL and the 'delete_key' which is the key of the short URL.<br>*The response contains a boolean indicating if the deletion was successful.<br>
 **Status**: 200(Success) / 404(Error) / 400(Error)
 
-## Response Examples
-#### Shorten
+## Example
+### ･Requests
+#### 1. Shorten
+```bash
+curl -X 'POST' \
+  'http://192.168.100.5:1357/shorten/' \
+  -H 'accept: application/json' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "url": "https://umamusume.jp/character/detail/?name=specialweek",
+  "key": "short"
+}'
+```
+
+#### 2. Delete
+```bash
+curl -X 'DELETE' \
+  'http://192.168.100.5:1357/delete/' \
+  -H 'accept: application/json' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "short_key": "short",
+  "delete_key": "eklR8RWkL7"
+}'
+```
+
+### ･Response
+#### 1. Shorten
  - Success Response
 ```json
 {
@@ -41,7 +67,7 @@ Requests to the API are done using JSON. The following endpoints are available:
         "short_url": "http://localhost:8000/short",
         "keys": {
             "short_key": "short",
-            "delete_key": "jvYJQdffIm"
+            "delete_key": "eklR8RWkL7"
         }
     }
 }
@@ -55,7 +81,7 @@ Requests to the API are done using JSON. The following endpoints are available:
 }
 ```
 
-#### Delete
+#### 2. Delete
  - Success Response
 ```json
 {
