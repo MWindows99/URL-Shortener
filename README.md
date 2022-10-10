@@ -14,7 +14,7 @@ Run the server using `python main.py`.
 The configuration is done in the `config.ini` file. The following options are available:
 
 **[API]**
- - `HOST` (String): The host to listen on. (Default: `0.0.0.0`)
+ - `HOST` (String): The host to listen on. (Default: `localhost`)
  - `PORT` (Int): The port to listen on. (Default: `8000`
 
 **[DATABASE]**
