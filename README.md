@@ -35,7 +35,7 @@ Requests to the API are done using JSON. The following endpoints are available:
 #### 1. Shorten
 ```bash
 curl -X 'POST' \
-  'http://192.168.100.5:1357/shorten/' \
+  'http://localhost:8000/shorten/' \
   -H 'accept: application/json' \
   -H 'Content-Type: application/json' \
   -d '{
@@ -47,7 +47,7 @@ curl -X 'POST' \
 #### 2. Delete
 ```bash
 curl -X 'DELETE' \
-  'http://192.168.100.5:1357/delete/' \
+  'http://localhost:8000/delete/' \
   -H 'accept: application/json' \
   -H 'Content-Type: application/json' \
   -d '{
