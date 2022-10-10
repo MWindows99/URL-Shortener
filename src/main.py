@@ -17,8 +17,23 @@ APP_HOST = str(config.get("API", "HOST"))
 APP_PORT = int(config.get("API", "PORT"))
 HOST_URL = str(config.get("DOMAIN", "DOMAIN"))
 DATABASE = str(config.get("DATABASE", "PATH"))
+SWA_DOCS = config.getboolean("DOCS", "SWAGGER")
+RED_DOCS = config.getboolean("DOCS", "REDOC")
 
-app = FastAPI(docs_url=None, redoc_url=None, openapi_url=None)
+if SWA_DOCS or RED_DOCS:
+    open_api = "/openapi.json"
+    swagger_docs = None
+    redoc_docs = None
+    if SWA_DOCS:
+        swagger_docs = "/docs"
+    if RED_DOCS:
+        redoc_docs = "/redoc"
+else:
+    open_api = None
+    swagger_docs = None
+    redoc_docs = None
+
+app = FastAPI(docs_url=swagger_docs, redoc_url=redoc_docs, openapi_url=open_api)
 
 class PostModel(BaseModel):
     url: str               # Required
