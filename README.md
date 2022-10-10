@@ -107,4 +107,4 @@ curl -X 'DELETE' \
 Please watch the [License](https://github.com/MWindows99/URL-Shortener/blob/main/LICENSE) file for more information.
 
 ## Report a bug
-Please send from [Issues](https://github.com/MWindows99/URL-Shortener/issues/new) tab.
+Please send from [Issues](https://github.com/MWindows99/URL-Shortener/issues) tab.
