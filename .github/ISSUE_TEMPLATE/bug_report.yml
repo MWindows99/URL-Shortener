@@ -1,0 +1,53 @@
+name: Bug Report
+description: Report broken or incorrect behaviour
+labels: unconfirmed bug
+body:
+  - type: markdown
+    attributes:
+      value: >
+        Thanks for taking the time to fill out a bug.
+        
+        Please note that this form is for bugs only!
+  - type: input
+    attributes:
+      label: Summary
+      description: A simple summary of your bug report.
+    validations:
+      required: true
+  - type: dropdown
+    attributes:
+      label: Type
+      description: Please select the report type.
+      options:
+        - Bug (Default)
+        - Vulnerability
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Error Message
+      description: >
+          Please paste the error message you see.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: System Information
+      description: >
+        Run `pip -list` and paste this information below.
+    validations:
+      required: true
+  - type: checkboxes
+    attributes:
+      label: Checklist
+      description: >
+        Make sure you've properly done due diligence when reporting this issue!
+      options:
+        - label: I have searched the open issues for duplicates.
+          required: true
+        - label: I have shown the entire traceback, if possible.
+          required: true
+  - type: textarea
+    attributes:
+      label: Additional Context
+      description: If there is anything else to say, please do so here.
