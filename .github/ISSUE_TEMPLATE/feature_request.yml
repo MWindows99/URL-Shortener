@@ -1,6 +1,6 @@
 name: Feature Request
 description: Suggest a feature for URL Shortener
-labels: feature request
+labels: Feature Request
 body:
   - type: input
     attributes:
