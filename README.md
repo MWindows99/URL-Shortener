@@ -23,6 +23,10 @@ The configuration is done in the `config.ini` file. The following options are av
 **[DOMAIN]**
  - `DOMAIN` (String): The domain to use for short URLs. (Default: `http://localhost:8000`)
 
+**[DOCS]**
+ - `SWAGGER` (Boolean): Change to `True` to enable the document. (Default: `False`)
+ - `REDOC` (Boolean): Change to `True` to enable the document. (Default: `False`)
+
 ## API Specification
 Requests to the API are done using JSON. The following endpoints are available:
  - `/shorten` [Method: `POST`] : Shortens a URL. The request body must contain a URL. If you want to use a custom short URL, you can add a 'key' in the request body. The delete key cannot be customized.<br>*The response contains the short URL and a boolean indicating if the operation was successful.<br>
