@@ -61,7 +61,7 @@ curl -X 'DELETE' \
  - Success Response
 ```json
 {
-    "status": 200,
+    "status": 201,
     "error": false,
     "data": {
         "short_url": "http://localhost:8000/short",
