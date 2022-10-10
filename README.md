@@ -25,9 +25,9 @@ The configuration is done in the `config.ini` file. The following options are av
 
 ## API Specification
 Requests to the API are done using JSON. The following endpoints are available:
- - `/shorten` [Method: `POST`] : Shortens a URL. The request body must contain a URL. If you want to use a custom short URL, you can add a 'key' in the request body. The response contains the short URL.<br>
+ - `/shorten` [Method: `POST`] : Shortens a URL. The request body must contain a URL. If you want to use a custom short URL, you can add a 'key' in the request body. The delete key cannot be customized.<br>*The response contains the short URL and a boolean indicating if the operation was successful.<br>
 **Status**: 201(Success) / 400(Error)
- - `/delete` [Method: `DELETE`] : Deletes a short URL. The request body must contain a 'short_key' which is the short URL and the 'delete_key' which is the key of the short URL. The response contains a boolean indicating if the deletion was successful.<br>
+ - `/delete` [Method: `DELETE`] : Deletes a short URL. The request body must contain a 'short_key' which is the short URL and the 'delete_key' which is the key of the short URL.<br>*The response contains a boolean indicating if the deletion was successful.<br>
 **Status**: 200(Success) / 404(Error) / 400(Error)
 
 ## Response Examples
@@ -41,7 +41,7 @@ Requests to the API are done using JSON. The following endpoints are available:
         "short_url": "http://localhost:8000/short",
         "keys": {
             "short_key": "short",
-            "delete_key": "delete"
+            "delete_key": "jvYJQdffIm"
         }
     }
 }
