@@ -4,6 +4,9 @@ This is a simple URL shortener written in Python using FastAPI and SQLite3.
 This URL shortening service supports custom URLs and URL removal.
 It is possible to create a custom URL and associate it with a destination URL.
 
+## Structure
+![image](images/image.svg)
+
 ## Installation
 Install the dependencies using `pip install -U -r requirements.txt`.
 
