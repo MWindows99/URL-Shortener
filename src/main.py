@@ -81,6 +81,7 @@ def random_url(url_data):
         key = "".join(random.choices(string.ascii_letters+string.digits, k=7))
         db_result = db_contact(sql, key, False)[0]
         short_url = HOST_URL + "/" + key
+        redirect_check = short_url == url_data
     return key, short_url
 
 @app.post("/shorten/", status_code=201)
